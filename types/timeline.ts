@@ -11,4 +11,5 @@ export interface TimelineProps {
 
 export interface TimelineItemProps extends TimelineItem {
   isLeft: boolean;
+  marginTop: string;
 }
