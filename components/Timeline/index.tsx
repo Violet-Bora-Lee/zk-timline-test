@@ -1,6 +1,6 @@
 import FloatingYearDisplay from './FloatingYearDisplay';
 import TimelineItem from "./TimelineItem";
-import { TIMELINE_DATA } from "@/constants/timeline";
+import { TIMELINE_DATA } from "@/data/timeline";
 
 const Timeline = () => {
   // Sort TIMELINE_DATA by date
