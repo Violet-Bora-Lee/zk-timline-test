@@ -16,6 +16,7 @@ export default {
         "gray-800": "var(--gray-800)",
         "gray-900": "var(--gray-900)",
         white: "var(--white)",
+        customYellow: "#ffcc00",
         customWhite: "#ffffff",
         customBlack: "#000000",
         customGray: "#6f6f6f",

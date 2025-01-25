@@ -32,7 +32,7 @@ const FloatingYearDisplay: React.FC = () => {
   }, []);
 
   return (
-    <div className="fixed top-5 right-5 bg-gray-800 text-customWhite p-2 rounded-lg text-4xl z-50">
+    <div className="fixed top-5 right-5 bg-black text-customYellow p-2 rounded-lg text-xl z-50 md:text-3xl">
       Year: {currentYear}
     </div>
   );
