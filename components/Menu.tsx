@@ -1,7 +1,12 @@
-import React from 'react'
-import Link from 'next/link'
+"use client";
+
+import React from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Menu() {
+  const pathname = usePathname();
+
   return (
     <section className="pt-20 pb-2 bg-black text-white" id="roadmap">
       <div className="container mx-auto px-4">
@@ -22,19 +27,28 @@ export default function Menu() {
             </span>
           </p>
           {/* Menu section */}
-          <div className="flex flex-col sm:flex-row justify-center mt-4 text-l md:text-xl text-customYellow font-semibold">
-            <Link href="/" className="btn btn-primary mb-4 sm:mb-0 sm:mr-6">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mt-4 text-l md:text-xl text-customYellow font-semibold">
+            {/* Always show Home */}
+            <Link href="/" className="btn btn-primary">
               Home
             </Link>
-            <Link href="/about" className="btn btn-primary mb-4 sm:mb-0 sm:mr-6">
-              About & Resources
-            </Link>
-            <Link href="/analysis" className="btn btn-primary">
-              Analysis
-            </Link>
+
+            {/* Hide link if current path is /about */}
+            {pathname !== '/about' && (
+              <Link href="/about" className="btn btn-primary">
+                About & Resources
+              </Link>
+            )}
+
+            {/* Hide link if current path is /analysis */}
+            {pathname !== '/analysis' && (
+              <Link href="/analysis" className="btn btn-primary">
+                Analysis
+              </Link>
+            )}
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
