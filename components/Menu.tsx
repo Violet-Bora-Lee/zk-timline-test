@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 export default function Menu() {
   return (
@@ -22,15 +23,15 @@ export default function Menu() {
           </p>
           {/* Menu section */}
           <div className="flex flex-col sm:flex-row justify-center mt-4 text-l md:text-xl text-customYellow font-semibold">
-            <a href="#" className="btn btn-primary mb-4 sm:mb-0 sm:mr-6">
+            <Link href="/" className="btn btn-primary mb-4 sm:mb-0 sm:mr-6">
               Home
-            </a>
-            <a href="#" className="btn btn-primary mb-4 sm:mb-0 sm:mr-6">
+            </Link>
+            <Link href="/about" className="btn btn-primary mb-4 sm:mb-0 sm:mr-6">
               About & Resources
-            </a>
-            <a href="#" className="btn btn-primary">
+            </Link>
+            <Link href="/analysis" className="btn btn-primary">
               Analysis
-            </a>
+            </Link>
           </div>
         </div>
       </div>
